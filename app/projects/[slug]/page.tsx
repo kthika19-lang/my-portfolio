@@ -1,5 +1,6 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
+import Image from "next/image";
 import { getProject, projects } from "../data";
 import type { Metadata } from "next";
 
@@ -65,8 +66,20 @@ export default async function ProjectPage({ params }: Props) {
         </div>
       </section>
 
-      {/* Hero image placeholder */}
-      <div className="bg-gray-100 w-full aspect-[16/7]" />
+      {/* Hero image */}
+      <div
+        className="relative w-full aspect-[16/7] overflow-hidden"
+        style={{ background: project.imageBg }}
+      >
+        <Image
+          src={project.image}
+          alt={project.title}
+          fill
+          className="object-contain"
+          sizes="100vw"
+          priority
+        />
+      </div>
 
       {/* Overview */}
       <section className="px-6 py-16 border-b border-gray-200">

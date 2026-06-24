@@ -1,17 +1,50 @@
 import Link from "next/link";
+import Image from "next/image";
 
 const projects = [
-  { title: "Neeyamo — B2B HRMS Platform", description: "Neeyamo, a leading provider of HR Technology, HR Operations, and HR Process Consulting services, committed to help build stronger businesses.", scope: "Discoveries, Conceptual Thinking, User Interviews, Micro-Interactions, Prototyping", duration: "3 months", slug: "neeyamo" },
-  { title: "WhatsApp SIM — White Label Design", description: "To modernise and launch a range of new offerings and services to over millions of users across platforms, through the White Label approach.", scope: "UX Research, UI/UX Designer, Design Systems, UX Writing, Handover", duration: "18 months", slug: "whatsapp-sim" },
-  { title: "Tax and Compliance — Fintech SaaS", description: "A design solution that positively impacted ESOPs and equity grants, supporting over 2,500 companies and 350,000 employees, collectively holding more than USD 60 billion in equity value.", scope: "Research, Iterative Designs, Metrics and Analytics", duration: "8 weeks", slug: "tax-compliance" },
-  { title: "Mahindra Rise — Reimagining the brand", description: "Facelift of the existing homepage rewriting what Rise stands for and highlighting the missions. Interactive space that lets users consume, inspire and contribute through true stories.", scope: "UI Design, Visual Design, Micro Interactions", duration: "2 weeks", slug: "mahindra-rise" },
+  {
+    title: "Neeyamo — B2B HRMS Platform",
+    description: "Neeyamo, a leading provider of HR Technology, HR Operations, and HR Process Consulting services, committed to help build stronger businesses.",
+    scope: "Discoveries, Conceptual Thinking, User Interviews, Micro-Interactions, Prototyping",
+    duration: "3 months",
+    slug: "neeyamo",
+    image: "/projects/neeyamo.png",
+    imageBg: "#f0f4f8",
+  },
+  {
+    title: "WhatsApp SIM — White Label Design",
+    description: "To modernise and launch a range of new offerings and services to over millions of users across platforms, through the White Label approach.",
+    scope: "UX Research, UI/UX Designer, Design Systems, UX Writing, Handover",
+    duration: "18 months",
+    slug: "whatsapp-sim",
+    image: "/projects/whatsapp-sim.png",
+    imageBg: "#e8f5e9",
+  },
+  {
+    title: "Tax and Compliance — Fintech SaaS",
+    description: "A design solution that positively impacted ESOPs and equity grants, supporting over 2,500 companies and 350,000 employees, collectively holding more than USD 60 billion in equity value.",
+    scope: "Research, Iterative Designs, Metrics and Analytics",
+    duration: "8 weeks",
+    slug: "tax-compliance",
+    image: "/projects/tax-compliance.png",
+    imageBg: "#f3f0ff",
+  },
+  {
+    title: "Mahindra Rise — Reimagining the brand",
+    description: "Facelift of the existing homepage rewriting what Rise stands for and highlighting the missions. Interactive space that lets users consume, inspire and contribute through true stories.",
+    scope: "UI Design, Visual Design, Micro Interactions",
+    duration: "2 weeks",
+    slug: "mahindra-rise",
+    image: "/projects/mahindra-rise.png",
+    imageBg: "#e8ede5",
+  },
 ];
 
 const articles = [
-  { tag: "Case Study", title: "A better streaming experience through UX", meta: "Read 3 Min · May 28, 2021", href: "#", cta: "Read" },
-  { tag: "Case Study", title: "Quick fixes to long-existing Millennial/Gen-Z problems", meta: "Read 5 Min · May 9, 2021", href: "#", cta: "Read" },
-  { tag: "Case Study", title: "India's first Thrift App — User Research, UX and UI Design", meta: "Read 5 Min · May 9, 2021", href: "#", cta: "Read" },
-  { tag: "Creative Designer", title: "Moderne — Architecture and Interior Design", meta: null, href: "https://modernedesignstudio.com", cta: "Visit" },
+  { tag: "Case Study", title: "A better streaming experience through UX", meta: "Read 3 Min · May 28, 2021", href: "https://bootcamp.uxdesign.cc/case-study-a-better-streaming-experience-through-ux-7db4076e54d", cta: "Read", image: "/articles/streaming.png" },
+  { tag: "Case Study", title: "Quick fixes to long-existing Millennial/Gen-Z problems", meta: "Read 5 Min · May 9, 2021", href: "https://medium.com/design-bootcamp/case-study-redesigning-instagram-7d886c184262", cta: "Read", image: "/articles/instagram.png" },
+  { tag: "Case Study", title: "India's first Thrift App — User Research, UX and UI Design", meta: "Read 5 Min · May 9, 2021", href: "#", cta: "Read", image: "/articles/thrift.png" },
+  { tag: "Creative Designer", title: "Moderne — Architecture and Interior Design", meta: null, href: "https://themoderne.in", cta: "Visit", image: "/articles/moderne.png" },
 ];
 
 export default function Home() {
@@ -33,7 +66,18 @@ export default function Home() {
       <section className="grid grid-cols-2">
         {projects.map((p) => (
           <Link key={p.slug} href={`/projects/${p.slug}`} className="p-6 border-b border-r border-gray-200 hover:bg-gray-50 transition-colors">
-            <div className="bg-gray-100 aspect-video mb-5" />
+            <div
+              className="relative aspect-video mb-5 rounded-lg overflow-hidden"
+              style={{ background: p.imageBg }}
+            >
+              <Image
+                src={p.image}
+                alt={p.title}
+                fill
+                className="object-contain"
+                sizes="(max-width: 768px) 100vw, 50vw"
+              />
+            </div>
             <h2 className="text-sm font-semibold mb-2">{p.title}</h2>
             <p className="text-xs text-gray-500 leading-relaxed mb-3">{p.description}</p>
             <p className="text-xs text-gray-400"><span className="text-black font-medium">Scope</span> {p.scope}</p>
@@ -47,7 +91,15 @@ export default function Home() {
         <div className="grid grid-cols-2 border border-gray-200">
           {articles.map((a, i) => (
             <div key={i} className={`flex items-start gap-4 p-5 border-gray-200 ${i < 2 ? "border-b" : ""} ${i % 2 === 0 ? "border-r" : ""}`}>
-              <div className="bg-gray-100 w-20 h-16 shrink-0" />
+              <div className="relative w-20 h-16 shrink-0 rounded overflow-hidden bg-gray-100">
+                <Image
+                  src={a.image}
+                  alt={a.title}
+                  fill
+                  className="object-cover"
+                  sizes="80px"
+                />
+              </div>
               <div>
                 <p className="text-xs text-gray-400 uppercase tracking-widest mb-1">{a.tag}</p>
                 <p className="text-sm font-medium mb-2">{a.title}</p>

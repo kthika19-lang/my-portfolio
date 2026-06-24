@@ -12,6 +12,8 @@ export type Project = {
   approach: string[];
   outcome: string;
   externalLink?: string;
+  image: string;
+  imageBg: string;
 };
 
 export const projects: Project[] = [
@@ -24,6 +26,8 @@ export const projects: Project[] = [
     duration: "3 months",
     year: "2022",
     role: "Product Designer",
+    image: "/projects/neeyamo.png",
+    imageBg: "#f0f4f8",
     overview: "Neeyamo provides HR technology and services to global enterprises. The challenge was to rethink core HRMS workflows to reduce friction for HR administrators managing payroll and compliance across multiple countries.",
     challenge: "HR administrators were dealing with fragmented workflows across multiple modules, leading to high error rates and extended time-on-task. The platform needed to feel cohesive, scalable, and intuitive for power users managing global HR operations.",
     approach: [
@@ -44,6 +48,8 @@ export const projects: Project[] = [
     duration: "18 months",
     year: "2021",
     role: "UX Designer",
+    image: "/projects/whatsapp-sim.png",
+    imageBg: "#e8f5e9",
     overview: "WhatsApp SIM aimed to modernise its product suite and launch new offerings to millions of users via a white-label approach — enabling partner brands to deliver tailored experiences at scale.",
     challenge: "Designing a flexible design system that could be white-labelled across different brands while maintaining usability and consistency. UX writing had to work across cultural and linguistic contexts.",
     approach: [
@@ -64,6 +70,8 @@ export const projects: Project[] = [
     duration: "8 weeks",
     year: "2021",
     role: "UX Designer",
+    image: "/projects/tax-compliance.png",
+    imageBg: "#f3f0ff",
     overview: "A fintech SaaS product helping companies manage employee stock ownership plans (ESOPs) and equity grants. The product needed to make complex financial concepts accessible to both HR admins and employees.",
     challenge: "Equity management involves deeply complex financial and legal information. Employees often don't understand their equity position, leading to missed financial opportunities and high support load.",
     approach: [
@@ -85,6 +93,8 @@ export const projects: Project[] = [
     duration: "2 weeks",
     year: "2020",
     role: "UI Designer",
+    image: "/projects/mahindra-rise.png",
+    imageBg: "#e8ede5",
     overview: "Mahindra Rise is the overarching brand philosophy of Mahindra Group. The goal was to redesign the Rise homepage to better communicate the brand's mission and enable users to engage with authentic human stories.",
     challenge: "The existing homepage failed to convey the emotional depth of the Rise philosophy. It was text-heavy, lacked storytelling, and had no meaningful interaction to draw users into the brand narrative.",
     approach: [
