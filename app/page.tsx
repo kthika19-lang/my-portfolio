@@ -30,13 +30,13 @@ const projects = [
     imageBg: "#f3f0ff",
   },
   {
-    title: "Mahindra Rise — Reimagining the brand",
-    description: "Facelift of the existing homepage rewriting what Rise stands for and highlighting the missions. Interactive space that lets users consume, inspire and contribute through true stories.",
-    scope: "UI Design, Visual Design, Micro Interactions",
-    duration: "2 weeks",
-    slug: "mahindra-rise",
-    image: "/projects/mahindra-rise.png",
-    imageBg: "#e8ede5",
+    title: "One Design System — Scalable Design System",
+    description: "A full fledged white label design system that scales with token-based architecture and is LLM compatible.",
+    scope: "Design Systems, White Label",
+    duration: "6–8 months",
+    slug: "one-design-system",
+    image: "/projects/one-design-system.png",
+    imageBg: "#eef1f8",
   },
 ];
 
