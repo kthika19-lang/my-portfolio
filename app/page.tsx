@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import CosmicScene from "./projects/one-design-system/CosmicScene";
 
 const projects = [
   {
@@ -30,13 +31,13 @@ const projects = [
     imageBg: "#f3f0ff",
   },
   {
-    title: "One Design System — Scalable Design System",
-    description: "A full fledged white label design system that scales with token-based architecture and is LLM compatible.",
-    scope: "Design Systems, White Label",
-    duration: "6–8 months",
+    title: "One Design System — for Developers & Agents",
+    description: "How I rebuilt Qapita's design system so engineers — and the AI agents writing their code — could ship consistent UI without a designer reviewing every screen.",
+    scope: "Design Systems, Tokens, Component Specs, Agent-Readable Docs",
+    duration: "3 weeks",
     slug: "one-design-system",
     image: "/projects/one-design-system.png",
-    imageBg: "#eef1f8",
+    imageBg: "#0c0812",
   },
 ];
 
@@ -70,13 +71,17 @@ export default function Home() {
               className="relative aspect-video mb-5 rounded-lg overflow-hidden"
               style={{ background: p.imageBg }}
             >
-              <Image
-                src={p.image}
-                alt={p.title}
-                fill
-                className="object-contain"
-                sizes="(max-width: 768px) 100vw, 50vw"
-              />
+              {p.slug === "one-design-system" ? (
+                <CosmicScene />
+              ) : (
+                <Image
+                  src={p.image}
+                  alt={p.title}
+                  fill
+                  className="object-contain"
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                />
+              )}
             </div>
             <h2 className="text-sm font-semibold mb-2">{p.title}</h2>
             <p className="text-xs text-gray-500 leading-relaxed mb-3">{p.description}</p>
