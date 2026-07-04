@@ -1,0 +1,81 @@
+<svg viewBox="0 0 640 560" xmlns="http://www.w3.org/2000/svg" font-family="'Inter',-apple-system,'Segoe UI',Helvetica,Arial,sans-serif">
+  <defs>
+    <linearGradient id="colorHero" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#4C1D95"/>
+      <stop offset="1" stop-color="#7C3AED"/>
+    </linearGradient>
+  </defs>
+  <rect x="1" y="1" width="638" height="558" rx="16" fill="#ffffff" stroke="#e7e3ee"/>
+  <rect x="1" y="1" width="638" height="6" rx="3" fill="url(#colorHero)"/>
+
+  <text x="32" y="52" font-size="12" font-weight="700" letter-spacing="1.5" fill="#4C1D95">FOUNDATION · COLOR</text>
+  <text x="32" y="90" font-size="30" font-weight="700" fill="#141019">Color</text>
+  <text x="32" y="116" font-size="13" fill="#7a7484">82 base &#183; 51 role &#183; 370 usage tokens · every value has a defined role</text>
+
+  <!-- Brand ramp -->
+  <text x="32" y="158" font-size="11" font-weight="700" letter-spacing="0.5" fill="#4a4553">BRAND · PRIMARY</text>
+  <g>
+    <rect x="32.0"  y="170" width="51" height="66" rx="4" fill="#F9F6FD" stroke="#e7e3ee"/>
+    <rect x="84.4"  y="170" width="51" height="66" rx="4" fill="#F6F2FC" stroke="#e7e3ee"/>
+    <rect x="136.7" y="170" width="51" height="66" rx="4" fill="#EFE7F9" stroke="#e7e3ee"/>
+    <rect x="189.1" y="170" width="51" height="66" rx="4" fill="#E2D5F4"/>
+    <rect x="241.5" y="170" width="51" height="66" rx="4" fill="#D1BDED"/>
+    <rect x="293.8" y="170" width="51" height="66" rx="4" fill="#BBA0E3"/>
+    <rect x="346.2" y="170" width="51" height="66" rx="4" fill="#A180D5"/>
+    <rect x="398.5" y="170" width="51" height="66" rx="4" fill="#855EC4"/>
+    <rect x="450.9" y="170" width="51" height="66" rx="4" fill="#633EA5"/>
+    <rect x="503.3" y="170" width="51" height="66" rx="4" fill="#462F6E"/>
+    <rect x="555.6" y="170" width="51" height="66" rx="4" fill="#261B3B"/>
+  </g>
+  <g font-size="10" fill="#7a7484" text-anchor="middle">
+    <text x="57.5"  y="252">50</text>
+    <text x="109.9" y="252">100</text>
+    <text x="162.2" y="252">200</text>
+    <text x="214.6" y="252">300</text>
+    <text x="267.0" y="252">400</text>
+    <text x="319.3" y="252">500</text>
+    <text x="371.7" y="252">600</text>
+    <text x="424.0" y="252">700</text>
+    <text x="476.4" y="252">800</text>
+    <text x="528.8" y="252">900</text>
+    <text x="581.1" y="252">950</text>
+  </g>
+
+  <!-- Role callouts -->
+  <g>
+    <rect x="32"  y="278" width="184" height="96" rx="12" fill="#faf9fc" stroke="#e7e3ee"/>
+    <rect x="48"  y="296" width="30" height="30" rx="7" fill="#633EA5"/>
+    <text x="90"  y="308" font-size="13" font-weight="700" fill="#141019">Brand/800</text>
+    <text x="90"  y="326" font-size="11" fill="#7a7484" font-family="ui-monospace,Menlo,monospace">#633EA5</text>
+    <text x="48"  y="352" font-size="11.5" fill="#4a4553">Primary CTA,</text>
+    <text x="48"  y="368" font-size="11.5" fill="#4a4553">interactive &amp; focus states</text>
+  </g>
+  <g>
+    <rect x="228" y="278" width="184" height="96" rx="12" fill="#faf9fc" stroke="#e7e3ee"/>
+    <rect x="244" y="296" width="30" height="30" rx="7" fill="#F6F2FC" stroke="#e0d7f2"/>
+    <text x="286" y="308" font-size="13" font-weight="700" fill="#141019">Brand/100</text>
+    <text x="286" y="326" font-size="11" fill="#7a7484" font-family="ui-monospace,Menlo,monospace">#F6F2FC</text>
+    <text x="244" y="352" font-size="11.5" fill="#4a4553">Selected item</text>
+    <text x="244" y="368" font-size="11.5" fill="#4a4553">background, chip fill</text>
+  </g>
+  <g>
+    <rect x="424" y="278" width="184" height="96" rx="12" fill="#faf9fc" stroke="#e7e3ee"/>
+    <rect x="440" y="296" width="30" height="30" rx="7" fill="#261B3B"/>
+    <text x="482" y="308" font-size="13" font-weight="700" fill="#141019">Brand/950</text>
+    <text x="482" y="326" font-size="11" fill="#7a7484" font-family="ui-monospace,Menlo,monospace">#261B3B</text>
+    <text x="440" y="352" font-size="11.5" fill="#4a4553">Page-level dark</text>
+    <text x="440" y="368" font-size="11.5" fill="#4a4553">surfaces</text>
+  </g>
+
+  <!-- Secondary accent -->
+  <text x="32" y="418" font-size="11" font-weight="700" letter-spacing="0.5" fill="#4a4553">SECONDARY · ACCENT</text>
+  <rect x="32"  y="430" width="60" height="34" rx="6" fill="#FBBF24"/>
+  <rect x="98"  y="430" width="60" height="34" rx="6" fill="#FCD34D"/>
+  <rect x="164" y="430" width="60" height="34" rx="6" fill="#FEF3C7"/>
+  <rect x="230" y="430" width="60" height="34" rx="6" fill="#FFFBEB" stroke="#efe7c9"/>
+  <text x="308" y="443" font-size="11.5" fill="#4a4553">Emphasis without competing</text>
+  <text x="308" y="459" font-size="11.5" fill="#4a4553">with the primary brand.</text>
+
+  <line x1="32" y1="490" x2="608" y2="490" stroke="#e7e3ee"/>
+  <text x="32" y="518" font-size="12.5" fill="#4a4553">Every swatch resolves through a role to a usage token — no raw hex past the base layer.</text>
+</svg>

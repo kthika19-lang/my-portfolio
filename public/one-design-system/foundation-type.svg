@@ -1,0 +1,41 @@
+<svg viewBox="0 0 640 560" xmlns="http://www.w3.org/2000/svg" font-family="'Inter',-apple-system,'Segoe UI',Helvetica,Arial,sans-serif">
+  <defs>
+    <linearGradient id="typeHero" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#4C1D95"/>
+      <stop offset="1" stop-color="#7C3AED"/>
+    </linearGradient>
+  </defs>
+  <rect x="1" y="1" width="638" height="558" rx="16" fill="#ffffff" stroke="#e7e3ee"/>
+  <rect x="1" y="1" width="638" height="6" rx="3" fill="url(#typeHero)"/>
+
+  <text x="32" y="52" font-size="12" font-weight="700" letter-spacing="1.5" fill="#4C1D95">FOUNDATION · TYPE</text>
+  <text x="32" y="90" font-size="30" font-weight="700" fill="#141019">Typography</text>
+  <text x="32" y="116" font-size="13" fill="#7a7484">3 families &#183; 37 styles &#183; 120% line-height &#183; 0% tracking</text>
+  <line x1="32" y1="136" x2="608" y2="136" stroke="#e7e3ee"/>
+
+  <!-- Hero specimen -->
+  <rect x="32" y="160" width="220" height="288" rx="12" fill="#faf9fc" stroke="#e7e3ee"/>
+  <text x="142" y="360" font-size="176" font-weight="700" text-anchor="middle" fill="#141019" font-family="'Roboto Slab',Rockwell,Georgia,'Times New Roman',serif">Ag</text>
+  <text x="142" y="404" font-size="15" font-weight="700" text-anchor="middle" fill="#4C1D95" font-family="'Roboto Slab',Rockwell,Georgia,serif">Roboto Slab</text>
+  <text x="142" y="426" font-size="12" text-anchor="middle" fill="#7a7484">Headings</text>
+
+  <!-- Scale rows -->
+  <g>
+    <text x="288" y="182" font-size="10.5" font-weight="700" letter-spacing="0.5" fill="#4C1D95">H1 · BOLD · 20/24</text>
+    <text x="288" y="208" font-size="22" font-weight="700" fill="#141019" font-family="'Roboto Slab',Rockwell,Georgia,serif">Equity, made clear</text>
+
+    <text x="288" y="250" font-size="10.5" font-weight="700" letter-spacing="0.5" fill="#4C1D95">H2 · SEMIBOLD · 18/24</text>
+    <text x="288" y="274" font-size="18" font-weight="600" fill="#141019" font-family="'Roboto Slab',Rockwell,Georgia,serif">Grants &amp; settlements</text>
+
+    <text x="288" y="316" font-size="10.5" font-weight="700" letter-spacing="0.5" fill="#4C1D95">BODY · REGULAR · 14/20</text>
+    <text x="288" y="338" font-size="14" fill="#4a4553">The quick brown fox jumps over</text>
+    <text x="288" y="356" font-size="14" fill="#4a4553">the lazy dog.</text>
+
+    <text x="288" y="398" font-size="10.5" font-weight="700" letter-spacing="0.5" fill="#4C1D95">CAPTION · MEDIUM · 12/16</text>
+    <text x="288" y="418" font-size="12" font-weight="500" fill="#7a7484">The quick brown fox jumps over the lazy dog.</text>
+  </g>
+
+  <line x1="32" y1="472" x2="608" y2="472" stroke="#e7e3ee"/>
+  <text x="32" y="502" font-size="12.5" fill="#4a4553">One family for headings, a fixed scale, and a single line-height rule — so type</text>
+  <text x="32" y="522" font-size="12.5" fill="#4a4553">never drifts screen to screen.</text>
+</svg>
