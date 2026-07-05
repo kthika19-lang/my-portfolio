@@ -73,7 +73,7 @@ export default function CosmicScene({ interactive = false }: { interactive?: boo
   }, [interactive]);
 
   return (
-    <div className="cx-thumb" ref={thumbRef}>
+    <div className={"cx-thumb" + (interactive ? "" : " cx-static")} ref={thumbRef}>
       <div className="cx-stage" ref={stageRef}>
         {/* ambient */}
         <div className="cx-glow" style={{ width: 420, height: 420, left: 120, top: -60, background: "#7C3AED" }} />
@@ -201,6 +201,7 @@ export default function CosmicScene({ interactive = false }: { interactive?: boo
 const cosmicCss = `
 .cx-thumb{position:relative;width:100%;aspect-ratio:16/9;overflow:hidden;border-radius:18px;
   background:radial-gradient(120% 120% at 70% 15%,#241a34 0%,#150f20 45%,#0b0710 100%);}
+.cx-thumb.cx-static{pointer-events:none;}
 .cx-stage{position:absolute;top:0;left:0;width:1200px;height:675px;transform-origin:top left;}
 .cx-streak{position:absolute;height:2px;border-radius:2px;background:linear-gradient(90deg,transparent,rgba(124,58,237,0.55),transparent);opacity:0.5;animation:cxDash linear infinite;}
 .cx-glow{position:absolute;border-radius:50%;filter:blur(60px);opacity:0.55;}
