@@ -5,7 +5,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "One Design System — Kiruthika R",
   description:
-    "How I rebuilt Qapita's design system so designers could prototype faster with AI using the real components — and engineers, and AI agents writing code, could ship consistent UI without a review on every screen.",
+    "How I rebuilt Qapita's design system so designers could prototype faster with AI using the real components, and engineers, and AI agents writing code, could ship consistent UI without a review on every screen.",
 };
 
 const HEADER = `<header class="hero">
@@ -16,32 +16,39 @@ const HEADER = `<header class="hero">
       <h1 class="hero-title">A Design System for Developers and Agents</h1>
     </div>
     <div class="hero-right">
-      <div class="hero-label">Design Systems</div>
-      <p class="hero-scope">Design Audit, Token Architecture, Design Foundation, Component Libraries, WCAG Compliance, Guideline &amp; Patterns, DS Dev Collaboration</p>
-      <p class="hero-dek">How I rebuilt Qapita's design system so designers could prototype faster with AI using the real components — and engineers, and AI agents writing code, could ship consistent UI without a review on every screen.</p>
+      
+      <div class="hero-meta">
+        <div class="hm-item"><span class="hm-lbl">Scope</span><div class="hm-val">Design Audit, Token Architecture, Design Foundation, Component Libraries, WCAG Compliance, Guideline &amp; Patterns, DS Dev Collaboration</div></div>
+        <div class="hm-row">
+          <div class="hm-item"><span class="hm-lbl">Duration</span><div class="hm-val">1.5 months</div></div>
+          <div class="hm-item"><span class="hm-lbl">Year</span><div class="hm-val">2026</div></div>
+          <div class="hm-item"><span class="hm-lbl">Role</span><div class="hm-val">Design Engineer</div></div>
+        </div>
+      </div>
     </div>
   </div>
-</header>`;
+</header>
+<div class="hero-dek-full"><div class="wrap"><p>How I rebuilt Qapita's design system so designers could prototype faster with AI using the real components, and engineers, and AI agents writing code, could ship consistent UI without a review on every screen.</p></div></div>`;
 
-const BODY = `<section class="intro">
-  <div class="intro-grid">
-    <div class="intro-brand">Cosmic</div>
-    <div class="intro-statement">
-      <div class="intro-line"><em>for</em> “Designers, Product Owners, Developers and Agents”</div>
-      <div class="intro-line"><em>who</em> “needs to design and build working prototypes with AI or Figma”</div>
-      <div class="intro-line"><em>is the</em> “single source of truth”</div>
-      <div class="intro-line"><em>which</em> “provides foundation and component library for designers (UI Kit), ready-made UI web components as code for developers, as well as guidelines, rules, and documentation for all.”</div>
-    </div>
-  </div>
-</section>
-
-
-<section id="context">
+const BODY = `<section id="intro-context">
   <div class="wrap">
-    <h2>Context</h2>
-    <p class="lead">Qapita is an equity-management platform — cap tables, ESOP administration, and digital share issuance — used by founders, finance teams, and employees across India and Southeast Asia.</p>
-    <p>The product's entire promise is a single, trustworthy source of truth for who owns what. That raises the stakes on interface consistency: when someone is approving an option exercise or reading their equity payslip, a screen that looks improvised reads as <em>"can I trust this number?"</em> Visual inconsistency isn't cosmetic here — it undercuts the core value proposition.</p>
-    <p>By the time I took this on, the platform served 2,500+ companies and 350,000+ stakeholders holding over USD 60 billion in equity across India and Southeast Asia. It had grown fast, and its interface had grown with it — in every direction at once.</p>
+    <div class="ic-grid">
+      <div class="ic-left">
+        <div class="intro-brand">Cosmic</div>
+        <div class="intro-statement">
+          <div class="intro-line"><em>for</em> “Designers, Product Owners, Developers and Agents”</div>
+          <div class="intro-line"><em>who</em> “needs to design and build working prototypes with AI or Figma”</div>
+          <div class="intro-line"><em>is the</em> “single source of truth”</div>
+          <div class="intro-line"><em>which</em> “provides foundation and component library for designers (UI Kit), ready-made UI web components as code for developers, as well as guidelines, rules, and documentation for all.”</div>
+        </div>
+      </div>
+      <div class="ic-right">
+        <h2>Context</h2>
+        <p class="lead">Qapita is an equity-management platform, cap tables, ESOP administration, and digital share issuance, used by founders, finance teams, and employees across India and Southeast Asia.</p>
+        <p>The product's entire promise is a single, trustworthy source of truth for who owns what. That raises the stakes on interface consistency: when someone is approving an option exercise or reading their equity payslip, a screen that looks improvised reads as <em>"can I trust this number?"</em> Visual inconsistency isn't cosmetic here, it undercuts the core value proposition.</p>
+        <p>By the time I took this on, the platform served 2,500+ companies and 350,000+ stakeholders holding over USD 60 billion in equity across India and Southeast Asia. It had grown fast, and its interface had grown with it, in every direction at once.</p>
+      </div>
+    </div>
   </div>
 </section>
 <section class="timeline2">
@@ -145,7 +152,7 @@ const BODY = `<section class="intro">
 <section id="foundation2">
   <div class="wrap">
     <div class="sec-rule"></div>
-    <h2 class="sec-h">Foundation</h2>
+    <h2 class="sec-h">Assets</h2>
     <div class="fnd-grid">
       <div class="fnd-card">
         <img src="/one-design-system/foundation-color.png" alt="Color token scale, Brand/50 to Brand/950 with hex values">
@@ -168,7 +175,7 @@ const BODY = `<section class="intro">
 <section id="icons2">
   <div class="wrap">
     <div class="ico-panel">
-      <img class="ico-illus" src="/one-design-system/icons.png" alt="Refreshed icon library — receipt illustration on a grid of outline icons">
+      <img class="ico-illus" src="/one-design-system/icons.png" alt="Refreshed icon library, receipt illustration on a grid of outline icons">
       <div class="ico-caption">
         <p class="ico-text">To identify gaps the existing icons assets were audited to identify specific icons in both, solid and outline variations, and a new and refreshed icon library was designed using Illustrator and Figma.</p>
         <div class="ico-count">~200 icons</div>
@@ -179,7 +186,7 @@ const BODY = `<section class="intro">
 <section id="components2">
   <div class="wrap">
     <div class="ico-panel">
-      <img class="ico-illus" src="/one-design-system/components.png" alt="Component library — navigation, buttons, toggles and the component configuration panel">
+      <img class="ico-illus" src="/one-design-system/components.png" alt="Component library, navigation, buttons, toggles and the component configuration panel">
       <div class="ico-caption">
         <p class="ico-text">Components were built as reusable blocks of our design system. Each component meets a specific interaction need, and has been specifically created to work together to create patterns.</p>
         <div class="ico-count">~24 components</div>
@@ -190,7 +197,7 @@ const BODY = `<section class="intro">
 <section id="patterns2">
   <div class="wrap">
     <div class="ico-panel">
-      <img class="ico-illus" src="/one-design-system/patterns.png" alt="Design patterns — shell components composed into a multi-step flow and shell layout">
+      <img class="ico-illus" src="/one-design-system/patterns.png" alt="Design patterns, shell components composed into a multi-step flow and shell layout">
       <div class="ico-caption">
         <p class="ico-text">Patterns were designed in a way that they can be reused in different parts of the design journey. Based on the design requirements and refinements of a flow, compositions were created with the involvement of the designers and engineers along with product and brand teams.</p>
         <div class="ico-count">design patterns</div>
@@ -206,11 +213,11 @@ const BODY = `<section class="intro">
 <section id="themes">
   <div class="wrap">
     <h2>One system, many brands</h2>
-    <p class="lead">The three-layer model isn't drift-proofing for its own sake — it's what lets one system carry many brands.</p>
-    <p>Color is organised into a small set of roles: a <strong>primary</strong> for identity and key actions, a <strong>secondary</strong> for accent and emphasis, and a <strong>neutral</strong> range for surfaces and text. Components reference only these roles, never raw values — so re-skinning for a different client is a base-palette swap, not a rebuild. Change the values behind the roles and every component re-skins at once. That's what lets the system scale from an in-house tool into a white-label foundation, shaped to each client we work with.</p>
+    <p class="lead">The three-layer model isn't drift-proofing for its own sake, it's what lets one system carry many brands.</p>
+    <p>Color is organised into a small set of roles: a <strong>primary</strong> for identity and key actions, a <strong>secondary</strong> for accent and emphasis, and a <strong>neutral</strong> range for surfaces and text. Components reference only these roles, never raw values, so re-skinning for a different client is a base-palette swap, not a rebuild. Change the values behind the roles and every component re-skins at once. That's what lets the system scale from an in-house tool into a white-label foundation, shaped to each client we work with.</p>
 
     <figure class="shot">
-      <div style="width:100%"><svg viewBox="20 144 880 272" xmlns="http://www.w3.org/2000/svg" font-family="'Inter',-apple-system,'Segoe UI',Helvetica,Arial,sans-serif">
+      <div style="width:100%"><svg viewBox="20 144 880 272" xmlns="http://www.w3.org/2000/svg" font-family="'Avenir Next',Avenir,-apple-system,'Segoe UI',sans-serif">
   <defs>
     <linearGradient id="thHero" x1="0" y1="0" x2="1" y2="0">
       <stop offset="0" stop-color="#4C1D95"/>
@@ -287,7 +294,7 @@ const BODY = `<section class="intro">
 </svg>
 
 </div>
-      <figcaption>Same components, same roles — only the base palette changes. That's the whole mechanism behind white-labelling the product per client.</figcaption>
+      <figcaption>Same components, same roles, only the base palette changes. That's the whole mechanism behind white-labelling the product per client.</figcaption>
     </figure>
   </div>
 </section>
@@ -313,19 +320,20 @@ const BODY = `<section class="intro">
     <div class="chal-grid chal-3">
       <div class="chal-item">
         <span class="chal-label">Consistency</span>
-        <p class="chal-desc">Getting consistency across product lines meant rules couldn't live in tribal knowledge or Figma comments — they had to be explicit enough for a designer, a developer, and an AI agent to read the same intent without translation. Forums and pattern libraries worked as the human-facing layer, but the real forcing function was writing naming and token rules precise enough that a non-human collaborator could parse them too.</p>
+        <p class="chal-desc">Getting consistency across product lines meant rules couldn't live in tribal knowledge or Figma comments, they had to be explicit enough for a designer, a developer, and an AI agent to read the same intent without translation. Forums and pattern libraries worked as the human-facing layer, but the real forcing function was writing naming and token rules precise enough that a non-human collaborator could parse them too.</p>
       </div>
       <div class="chal-item">
         <span class="chal-label">Idea to Prototype made easy</span>
-        <p class="chal-desc">Speed wasn't the goal until the system was mature enough to expose it as a gap: teams were rebuilding primitives instead of composing them. Once the library was structured and swappable, prototyping time collapsed — and that same structure is what let an agent assemble a feature from components without needing a human to hand-hold the logic.</p>
+        <p class="chal-desc">Speed wasn't the goal until the system was mature enough to expose it as a gap: teams were rebuilding primitives instead of composing them. Once the library was structured and swappable, prototyping time collapsed, and that same structure is what let an agent assemble a feature from components without needing a human to hand-hold the logic.</p>
       </div>
       <div class="chal-item">
         <span class="chal-label">Reusability and modularity</span>
-        <p class="chal-desc">Gaps kept surfacing at the handoff from brainstorm to production — components that looked reusable in Figma diverged the moment engineering touched them. The fix was continuous embedding, not a one-time sync: keeping designers, developers, and any AI-driven step aligned to the same source components throughout, so nothing needed re-interpretation downstream.</p>
+        <p class="chal-desc">Gaps kept surfacing at the handoff from brainstorm to production, components that looked reusable in Figma diverged the moment engineering touched them. The fix was continuous embedding, not a one-time sync: keeping designers, developers, and any AI-driven step aligned to the same source components throughout, so nothing needed re-interpretation downstream.</p>
       </div>
     </div>
   </div>
-</section>`;
+</section>
+<section id="backcta"><div class="wrap"><a class="back-cta" href="#">↑ Scroll up</a></div></section>`;
 
 export default function OneDesignSystemPage() {
   return (
