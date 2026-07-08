@@ -43,15 +43,28 @@ export default function RootLayout({
         {children}
 
         {/* FOOTER */}
-        <footer className="border-t border-gray-200 px-6 py-4 flex items-center justify-between overflow-hidden">
+        <footer className="bg-black text-white px-6 py-4 flex items-center justify-between gap-6 overflow-hidden">
+          <Link
+            href="/"
+            className="shrink-0 inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-widest border border-white/40 rounded-full px-4 py-2 hover:bg-white hover:text-black transition-colors"
+          >
+            ← Back to Projects
+          </Link>
           <div className="overflow-hidden whitespace-nowrap flex-1">
             <span className="text-xs tracking-widest uppercase animate-marquee inline-block">
               PORTFOLIO+++ &nbsp; PORTFOLIO+++ &nbsp; PORTFOLIO+++ &nbsp; PORTFOLIO+++ &nbsp; PORTFOLIO+++ &nbsp; PORTFOLIO+++ &nbsp;
             </span>
           </div>
-          <div className="text-right text-xs ml-12 shrink-0">
-            <a href="mailto:kthika.19@gmail.com" className="block text-gray-500">kthika.19@gmail.com</a>
-            <a href="/resume.pdf" className="underline">View Resume</a>
+          <div className="text-right text-xs shrink-0">
+            <a href="mailto:kthika.19@gmail.com" className="block text-gray-300">kthika.19@gmail.com</a>
+            <a
+              href="https://docs.google.com/document/d/1v6Hn2Lttu7qxJDWac0oWtK6jmubaoaReg21g309MY9Y/edit?usp=sharing"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline"
+            >
+              View Resume
+            </a>
           </div>
         </footer>
 
