@@ -66,14 +66,9 @@ export default function NeeyamoCaseStudy() {
     const ctx = cv.getContext("2d");
     if (!ctx) return;
     const colors = ["#004bdd", "#236eff", "#7aa5ff", "#bcd1ff", "#ebf1ff"];
-    let W = 0, H = 0, raf = 0;
     type P = { x: number; y: number; w: number; h: number; c: string; vy: number; rot: number; vr: number; sway: number; amp: number };
+    let W = 0, H = 0, raf = 0;
     let parts: P[] = [];
-    const resize = () => {
-      const r = cv.getBoundingClientRect();
-      W = cv.width = r.width;
-      H = cv.height = r.height;
-    };
     const make = (top: boolean): P => ({
       x: Math.random() * W,
       y: top ? -10 - Math.random() * H : Math.random() * H,
@@ -86,31 +81,47 @@ export default function NeeyamoCaseStudy() {
       sway: Math.random() * 6.28,
       amp: 0.3 + Math.random() * 0.6,
     });
-    resize();
-    parts = Array.from({ length: 40 }, () => make(false));
+    const seed = () => { parts = Array.from({ length: 40 }, () => make(false)); };
+    // Re-measure whenever the canvas actually gets a size (e.g. after the
+    // mailer image loads and lays out) — starting on mount alone measures 0x0.
+    const resize = () => {
+      const r = cv.getBoundingClientRect();
+      const w = Math.round(r.width), h = Math.round(r.height);
+      if (w === W && h === H) return;
+      W = cv.width = w;
+      H = cv.height = h;
+      if (W > 0 && H > 0 && parts.length === 0) seed();
+    };
     const frame = () => {
-      ctx.clearRect(0, 0, W, H);
-      for (let i = 0; i < parts.length; i++) {
-        const p = parts[i];
-        p.sway += 0.02;
-        p.y += p.vy;
-        p.x += Math.sin(p.sway) * p.amp;
-        p.rot += p.vr;
-        if (p.y > H + 12) parts[i] = make(true);
-        ctx.save();
-        ctx.translate(p.x, p.y);
-        ctx.rotate(p.rot);
-        ctx.fillStyle = p.c;
-        ctx.globalAlpha = 0.9;
-        ctx.fillRect(-p.w / 2, -p.h / 2, p.w, p.h);
-        ctx.restore();
+      if (W > 0 && H > 0) {
+        if (parts.length === 0) seed();
+        ctx.clearRect(0, 0, W, H);
+        for (let i = 0; i < parts.length; i++) {
+          const p = parts[i];
+          p.sway += 0.02;
+          p.y += p.vy;
+          p.x += Math.sin(p.sway) * p.amp;
+          p.rot += p.vr;
+          if (p.y > H + 12) parts[i] = make(true);
+          ctx.save();
+          ctx.translate(p.x, p.y);
+          ctx.rotate(p.rot);
+          ctx.fillStyle = p.c;
+          ctx.globalAlpha = 0.9;
+          ctx.fillRect(-p.w / 2, -p.h / 2, p.w, p.h);
+          ctx.restore();
+        }
       }
       raf = requestAnimationFrame(frame);
     };
+    resize();
     frame();
+    const ro = new ResizeObserver(resize);
+    ro.observe(cv);
     window.addEventListener("resize", resize);
     return () => {
       cancelAnimationFrame(raf);
+      ro.disconnect();
       window.removeEventListener("resize", resize);
     };
   }, []);
