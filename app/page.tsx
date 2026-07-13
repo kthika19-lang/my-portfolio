@@ -64,31 +64,44 @@ export default function Home() {
         <span className="text-xs tracking-widest uppercase animate-marquee inline-block">PORTFOLIO+++ UI and UX Product Design Design Systems Case Studies User Research UX Writing PORTFOLIO+++ UI and UX Product Design Design Systems Case Studies User Research UX Writing</span>
       </div>
 
-      <section className="grid grid-cols-2">
-        {projects.map((p) => (
-          <Link key={p.slug} href={`/projects/${p.slug}`} className="p-6 border-b border-r border-gray-200 hover:bg-gray-50 transition-colors">
-            <div
-              className="relative aspect-video mb-5 rounded-lg overflow-hidden"
-              style={{ background: p.imageBg }}
-            >
-              {p.slug === "one-design-system" ? (
-                <CosmicScene />
-              ) : (
-                <Image
-                  src={p.image}
-                  alt={p.title}
-                  fill
-                  className="object-contain"
-                  sizes="(max-width: 768px) 100vw, 50vw"
-                />
-              )}
+      <section className="px-6 py-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:items-stretch">
+          {[[projects[0], projects[2]], [projects[1], projects[3]]].map((col, ci) => (
+            <div key={ci} className="flex flex-col gap-6">
+              {col.map((p, ri) => {
+                const big = ci === ri; // larger cards sit on the diagonal
+                return (
+                  <Link
+                    key={p.slug}
+                    href={`/projects/${p.slug}`}
+                    className={`group relative flex flex-col rounded-2xl border border-gray-100 bg-gray-50 p-6 transition duration-200 ease-out hover:z-10 hover:scale-[1.02] hover:border-gray-200 hover:bg-gray-100 hover:shadow-lg ${ri === 1 ? "md:flex-1" : ""}`}
+                  >
+                    <div
+                      className={`relative ${big ? "aspect-[4/3]" : "aspect-video"} mb-5 rounded-xl overflow-hidden`}
+                      style={{ background: p.imageBg }}
+                    >
+                      {p.slug === "one-design-system" ? (
+                        <CosmicScene />
+                      ) : (
+                        <Image
+                          src={p.image}
+                          alt={p.title}
+                          fill
+                          className="object-contain"
+                          sizes="(max-width: 768px) 100vw, 50vw"
+                        />
+                      )}
+                    </div>
+                    <h2 className="text-sm font-semibold mb-2">{p.title}</h2>
+                    <p className="text-xs text-gray-500 leading-relaxed mb-3">{p.description}</p>
+                    <p className="text-xs text-gray-400"><span className="text-black font-medium">Scope</span> {p.scope}</p>
+                    <p className="text-xs text-gray-400 mt-1"><span className="text-black font-medium">Duration</span> {p.duration}</p>
+                  </Link>
+                );
+              })}
             </div>
-            <h2 className="text-sm font-semibold mb-2">{p.title}</h2>
-            <p className="text-xs text-gray-500 leading-relaxed mb-3">{p.description}</p>
-            <p className="text-xs text-gray-400"><span className="text-black font-medium">Scope</span> {p.scope}</p>
-            <p className="text-xs text-gray-400 mt-1"><span className="text-black font-medium">Duration</span> {p.duration}</p>
-          </Link>
-        ))}
+          ))}
+        </div>
       </section>
 
       <section className="px-6 py-12">
